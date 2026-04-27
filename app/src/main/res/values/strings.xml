@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Calculadora de Aposentadoria</string>
+    <string name="button_text">Calcular</string>
+    <string name="hint">Digite sua idade</string>
+    <string name="dev_name">Guilherme Villas Boas Braz</string>
+</resources>
