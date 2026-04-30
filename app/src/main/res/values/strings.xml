@@ -3,4 +3,7 @@
     <string name="button_text">Calcular</string>
     <string name="hint">Digite sua idade</string>
     <string name="dev_name">Guilherme Villas Boas Braz</string>
+    <string name="informe_uma_idade">Informe uma idade</string>
+    <string name="op_masculino">Masculino</string>
+    <string name="op_feminino">Feminino</string>
 </resources>

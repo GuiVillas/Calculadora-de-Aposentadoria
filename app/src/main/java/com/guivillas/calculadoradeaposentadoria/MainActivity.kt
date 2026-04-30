@@ -5,6 +5,8 @@ import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.guivillas.calculadoradeaposentadoria.databinding.ActivityMainBinding
 
+const val IDADE_APOSENTADORIA_MASCULINO = 65
+const val IDADE_APOSENTADORIA_FEMININO = 62
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         val editText = binding.editText
         val textView = binding.textView
 
-        val options = listOf("Masculino", "Feminino")
+        val options = listOf(getString(R.string.op_masculino), getString(R.string.op_feminino))
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
         binding.spinner.adapter = adapter
 
@@ -27,9 +29,9 @@ class MainActivity : AppCompatActivity() {
             var result: Long = 0
 
             if (selectedOption.trim() == "Masculino" && age != null) {
-                result = 65 - age
+                result = IDADE_APOSENTADORIA_MASCULINO - age
             } else if(selectedOption.trim() == "Feminino" && age != null) {
-                result = 62 - age
+                result = IDADE_APOSENTADORIA_FEMININO - age
             } else {
                 textView.text = "Informe uma idade válida."
             }
